@@ -1,0 +1,99 @@
+%\documentclass[twocolumn]{fairmeta}
+% Option "twocolumn" available, but please prioritize single-column
+\documentclass[onecolumn]{fairmeta}
+\usepackage[most]{tcolorbox}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\newcommand{\QG}[1]{\textcolor{red}{QG:~#1}}
+\newcommand{\TN}[1]{\textcolor{orange}{TN:~#1}}
+\newcommand{\NB}[1]{\textcolor{blue}{NB:~#1}}
+\newcommand{\MR}[1]{\textcolor{magenta}{MR:~#1}}
+
+\title{FORGE: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning}
+
+% ORDER TBD
+\author[1]{Chuhao Zhou}
+\author[2]{Liquan Wang}
+\author[2]{Shuxin Cao}
+\author[1]{Xiangyu Chen}
+\author[1]{Yuxuan Hu}
+\author[1]{Boyu Ma}
+\author[2]{Animesh Garg}
+\author[1, \dagger]{Jianfei Yang}
+
+
+\affiliation[1]{MARS Lab, Nanyang Technological University}
+\affiliation[2]{Georgia Institute of Technology}
+
+
+%\contribution[*]{Work done at Meta}
+\contribution[\dagger]{Corresponding Author}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{multirow} 
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{placeins}
+% \usepackage{xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADD COMMAND
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{enumitem}
+\definecolor{cPink}{RGB}{255,105,180}
+\newcommand{\lw}[1]{\textcolor{cPink}{[LW: #1]}}
+\newcommand{\algoname}{\textsc{FORGE}}
+
+
+\abstract{
+While humans readily repurpose a book, a stone, or a shoe to drive a nail, robots trained on specific tools fail to transfer the same function to novel ones -- a gap we formalize as \textit{functional generalization}. Such tools share a common functional intent that is visually recognizable, yet this perceptual similarity does not carry over to action space, where each tool demands an entirely different motor pattern. To bridge this gap, we explore intermediate representations including affordance images, human video prompts, and 2D keypoint trajectories, finding that keypoint trajectories best balance functional expressiveness and action groundability. Building on this, we propose \textbf{F}uncti\textbf{O}nal \textbf{R}easoning and \textbf{G}rounded \textbf{E}xecution (\algoname{}), a two-stage policy that decouples functional reasoning from action execution: predicting generalizable keypoint trajectories from action-free data, then grounding them into robot actions with limited demonstrations. On a seven-tool hitting-function benchmark, \algoname{} consistently outperforms state-of-the-art methods on unseen tools in both simulation and the real world, achieving over $2\times$ improvement in average success rate. More experimental results are available at: \url{https://FORGE-policy.github.io}.
+% %
+}
+
+\correspondence{Jianfei Yang at \email{jianfei.yang@ntu.edu.sg}}
+
+% You can add additional metadata fields as follows
+%\metadata[Code]{\url{https://github.com/facebookresearch/repo}}
+
+%===============================================================================
+\begin{document}
+\maketitle
+
+%===============================================================================
+
+\input{sections/01_introduction}
+
+%===============================================================================
+
+\input{sections/02_related-work}
+
+%===============================================================================
+
+\input{sections/03-method}
+
+%===============================================================================
+
+\input{sections/04-experiments}
+
+%===============================================================================
+\input{sections/05-conclusion}
+
+
+
+\clearpage
+\newpage
+\bibliographystyle{assets/plainnat}
+\bibliography{paper}
+
+\clearpage
+\input{sections/06-appendix}
+
+\end{document}

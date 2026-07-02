@@ -1,0 +1,80 @@
+% \section{Conclusion and Limitation}
+% \label{sec:conclusion}
+\section{Conclusion and Limitation}
+\label{sec:conclusion}
+In this paper, we identify \textit{functional generalization} as an important yet underexplored problem, where an agent needs to accomplish the same function with unseen tools. 
+To address this problem, we propose \algoname{}, a policy that decouples functional reasoning from action execution via an intermediate representation. 
+In this way, \algoname{} learns functional intent from action-free data to predict keypoint-based plans, and then grounds them into executable robot actions by fine-tuning on limited action-labeled demonstrations.
+We introduce a seven-tool hitting-function benchmark to evaluate functional generalization in simulation and real-world settings. 
+Extensive experiments show that \algoname{} improves generalization to unseen tools over state-of-the-art methods. 
+
+\paragraph{Limitations and Future Work.}
+% Although this work introduces a new functional generalization problem, our current solution still has several limitations. 
+First, the functional-relevant hitting and target points are specified in this study, while future work may leverage vision foundation models~\cite{yuan2025robopoint} or pretrain a keypoint proposal model to automatically identify function-relevant keypoints. 
+Second, our pipeline does not consider the grasping process. 
+We will extend \algoname{} to predict grasp styles from keypoint-based functional trajectories and study more dedicated end-effectors such as dexterous hands.
+
+
+% \section{Citations}
+% \label{sec:citations}
+
+% 	Citations can be made using either \textbackslash citep\{\} or \textbackslash citet\{\}, depending from the appropriateness. To avoid the citation moving to the next line, it is often a good practice to replace the space before with a tilde (\~{}) character.
+% 	Example 1: ``CoRL is the best conference ever~\citep{Gauss1857}.''
+% 	Example 2: ``\citet{Lagrange1788} proved, both theoretically and numerically, that CoRL is the best conference ever.''
+	
+%===============================================================================
+
+% \section{Experimental Results}
+% \label{sec:result}
+
+% 	Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo.
+% 	Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan
+% 	bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit
+% 	mollis. 
+
+% 	Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus
+% 	et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper
+% 	vestibulum turpis. Pellentesque cursus luctus mauris.
+	
+% 	Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero.
+% 	Vivamus viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper 	elit. 
+% 	Proin fermentum massa ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo.
+% 	Maecenas lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit
+% 	ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tin-
+% 	cidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec bibendum quam
+% 	in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+% 	pellentesque felis eu massa.
+% 	Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. 
+	
+% 	Lorem
+% 	ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus
+% 	convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet,
+% 	enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae
+% 	tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta vehicula.
+
+% %===============================================================================
+
+% \section{Conclusion}
+% \label{sec:conclusion}
+
+% 	Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo.
+% 	Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan
+% 	bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit
+% 	mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus
+% 	et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper
+% 	vestibulum turpis. Pellentesque cursus luctus mauris.
+% 	Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero.
+% 	Vivamus viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper
+% 	elit. Proin fermentum massa ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo.
+% 	Maecenas lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit
+% 	ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tin-
+% 	cidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec bibendum quam
+% 	in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+% 	pellentesque felis eu massa.
+% 	Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem
+% 	ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus
+% 	convallis augue. Etiam facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet,
+% 	enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae
+% 	tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae risus porta vehicula.
+
+%===============================================================================

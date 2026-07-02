@@ -1,0 +1,37 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "paper.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "Makefile"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "assets/Optimistic.ttf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "assets/optimistic.tfm"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "figures/planning_perf_droid.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "figures/sampling.pdf"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "figures/scaling_controller.pdf"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2025",
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}
