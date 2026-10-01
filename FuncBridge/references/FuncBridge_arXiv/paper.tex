@@ -1,0 +1,109 @@
+%\documentclass[twocolumn]{fairmeta}
+% Option "twocolumn" available, but please prioritize single-column
+\documentclass[onecolumn]{fairmeta}
+\usepackage[most]{tcolorbox}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\newcommand{\QG}[1]{\textcolor{red}{QG:~#1}}
+\newcommand{\TN}[1]{\textcolor{orange}{TN:~#1}}
+\newcommand{\NB}[1]{\textcolor{blue}{NB:~#1}}
+\newcommand{\MR}[1]{\textcolor{magenta}{MR:~#1}}
+
+\title{\algoname{}: Towards Functional Tool-Use Generalization via Keypoint Trajectory Reasoning}
+
+% ORDER TBD
+\author[1]{Chuhao Zhou}
+\author[2]{Liquan Wang}
+\author[2]{Shuxin Cao}
+\author[1]{Xiangyu Chen}
+\author[1]{Yuxuan Hu}
+\author[1]{Boyu Ma}
+\author[2]{Animesh Garg}
+\author[1, \dagger]{Jianfei Yang}
+
+
+\affiliation[1]{MARS Lab, Nanyang Technological University}
+\affiliation[2]{Georgia Institute of Technology}
+
+
+%\contribution[*]{Work done at Meta}
+\contribution[\dagger]{Corresponding Author}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{multirow} 
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{placeins}
+% \usepackage{xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ADD COMMAND
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{enumitem}
+\definecolor{cPink}{RGB}{255,105,180}
+\newcommand{\lw}[1]{\textcolor{cPink}{[LW: #1]}}
+\newcommand{\algoname}{\textsc{FuncBridge}}
+
+
+\abstract{
+While humans readily repurpose a book, a stone, or a shoe to drive a nail, robots trained on specific tools fail to transfer the same function to novel ones -- a gap we formalize as \textit{functional generalization}.
+Functionally equivalent tools share visually recognizable functional intent, such as where contact can occur and how a contact region should move to the target. However, this perceptual similarity does not directly carry over to action space, where each tool demands a different motor pattern to realize the function.
+To bridge this gap, we explore intermediate representations including affordance images, human video prompts, functional videos and object masks, and 2D keypoint trajectories, finding that keypoint trajectories best balance functional expressiveness and action groundability. 
+Building on this, {we present \algoname{}, a two-stage framework} that decouples functional reasoning from action execution: learning to predict generalizable keypoint trajectories from action-free data, then grounding them into robot actions with limited demonstrations. 
+Across a benchmark spanning ten tools and three functions, including hitting, sweeping, and hooking, \algoname{} consistently outperforms state-of-the-art methods on unseen tools in both simulation and the real world.
+}
+
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=red,
+%     citecolor=cyan,
+%     filecolor=magenta,      
+%     urlcolor=magenta,
+% }
+    
+\correspondence{Jianfei Yang at \email{jianfei.yang@ntu.edu.sg}}
+% You can add additional metadata fields as follows
+\metadata[Project Page]{\url{https://chuhaozhou99.github.io/FuncBridge/}}
+
+%===============================================================================
+\begin{document}
+\maketitle
+
+%===============================================================================
+
+\input{sections/01_introduction}
+
+%===============================================================================
+
+\input{sections/02_related-work}
+
+%===============================================================================
+
+\input{sections/03-method}
+
+%===============================================================================
+
+\input{sections/04-experiments}
+
+%===============================================================================
+\input{sections/05-conclusion}
+
+
+
+\clearpage
+\newpage
+\bibliographystyle{assets/plainnat}
+\bibliography{paper}
+
+\clearpage
+\input{sections/06-appendix}
+
+\end{document}
